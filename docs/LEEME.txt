@@ -1,0 +1,72 @@
+SITIO WEB "VELAGIO MEMORIAL" - Proyecto escolar
+================================================
+Basado en la plantilla gratuita "Eternal" de TemplatesJungle (ver licencia-plantilla.txt).
+Para verlo, abre index.html en el navegador (necesitas internet para Bootstrap, iconos y fuentes).
+
+ESTRUCTURA
+velagio-memorial/
+├── index.html                    Inicio
+├── assets/
+│   ├── css/                      style.css (plantilla), custom.css (estilos propios), vendor.css
+│   ├── js/                       jQuery, plugins y script.js
+│   └── images/                   Fotos e imágenes
+├── paginas/
+│   ├── empresa/                  nosotros, galeria (filtro + visor de fotos),
+│   │                             ubicacion (mapa + geolocalización), contacto
+│   ├── servicios/                los 9 servicios + página general:
+│   │                             servicios-funerarios, salas, embalsamadora, hornos-crematorios,
+│   │                             nichos, panteon, panteon-temporal, panteon-ecologico,
+│   │                             floreria (carrito), servicios (todos)
+│   ├── ayuda/                    atencion-inmediata, tramites, preguntas
+│   └── sistema/                  gracias, 404
+└── docs/                         LEEME.txt, licencia-plantilla.txt
+
+REGLAS DE RUTAS (importante si agregas páginas)
+- index.html está en la raíz: usa "assets/..." y "paginas/...".
+- Las páginas dentro de paginas/<carpeta>/ están a 2 niveles: usa "../../assets/..."
+  para recursos, "../../index.html" para el inicio y "../<carpeta>/<pagina>.html" para otras secciones.
+
+QUÉ CAMBIAR
+- Nombre, teléfono, WhatsApp, correo y dirección: buscar y reemplazar en todos los .html
+  ("Velagio Memorial", "+52 55 1948 1880", "5215519481880", "contacto@velagiomemorial.mx").
+- Ubicación (sede única Grupo Memorial Velagio): paginas/empresa/ubicacion.html
+  (mapa, botón "Cómo llegar" y "¿A qué distancia estoy?"). Contacto usa el mismo mapa.
+- El sitio no muestra precios ni costos. Si algún día
+  quieren mostrarlos, se pueden volver a agregar.
+- Estilos propios: assets/css/custom.css.
+- Los formularios no guardan datos (sólo redirigen a gracias.html); para guardarlos
+  hay que conectarlos a un backend (PHP, Node, etc.).
+
+LOGO Y BARRA FIJA
+- El logo está hecho con texto + CSS (clase .logo-velagio en assets/css/custom.css) y la paloma
+  es assets/images/paloma.png (recortada del logo original, fondo transparente).
+- favicon: assets/images/favicon.png
+- La barra superior y el menú se quedan fijos al hacer scroll (#header en custom.css).
+
+REDES SOCIALES
+- Facebook, Instagram, X, TikTok, Threads y Pinterest (barra superior y pie de página).
+- Los íconos están incrustados en cada página (no dependen de internet).
+- Para cambiar un enlace: buscar la URL de la red en los .html y reemplazarla.
+
+SEO (POSICIONAMIENTO EN GOOGLE) - palabra clave principal "Servicios funerarios en Ixtapaluca"
+- Cada página tiene <title> y <meta description> con "Ixtapaluca" (ej. "Funeraria en Ixtapaluca 24 horas",
+  "Crematorio en Ixtapaluca", "Salas de velación en Ixtapaluca", "Funerales en Ixtapaluca").
+- Un solo <h1> por página (título corto) y la etiqueta "Servicios funerarios en Ixtapaluca · 24 horas" en los banners.
+- El inicio tiene la sección "Funeraria en Ixtapaluca con atención las 24 horas" con texto pensado para Google.
+- Meta keywords, etiquetas geo (Ixtapaluca), Open Graph (para compartir en redes), canonical y
+  datos estructurados de negocio local (JSON-LD con dirección, teléfono, horario 24 h, coordenadas y redes).
+- sitemap.xml y robots.txt en la raíz. Usan el dominio de ejemplo https://www.velagiomemorial.mx:
+  al publicar el sitio, reemplázalo por el dominio real (buscar "velagiomemorial.mx" en todos los archivos).
+- Para que Google los encuentre más rápido: dar de alta el sitio en Google Search Console (subir sitemap.xml)
+  y poner el enlace del sitio en el perfil de Google Maps de Grupo Memorial Velagio.
+
+NUESTRO EQUIPO (página Nosotros)
+- Las imágenes son temporales (inicial en círculo dorado). Están en assets/images/equipo/:
+  max.jpg, gracelia.jpg, miriam.jpg, mario.jpg, miguel.jpg, ester.jpg, brisa.jpg, nanci.jpg, pablo.jpg
+- Para poner la foto real: guarda la foto con el MISMO nombre (ej. max.jpg) y reemplaza el archivo.
+  Se recomienda una foto cuadrada (por ejemplo 600 x 600 px); si no es cuadrada, el sitio la recorta al centro.
+
+FOTOS REALES (assets/images/fotos/)
+- Fotos con logo de Velagio ya recortadas a la medida de cada espacio (banners, tarjetas de servicios, salas y galería).
+- Galería: cada foto tiene versión grande (visor) y miniatura "-min" cuadrada. Para agregar una, copia el bloque de otra foto en galeria.html.
+- Siguen con imagen de la plantilla (faltan fotos): embalsamadora, hornos crematorios, florería y trámites.

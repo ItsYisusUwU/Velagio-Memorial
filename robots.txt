@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /paginas/sistema/
+
+Sitemap: https://www.velagiomemorial.mx/sitemap.xml
