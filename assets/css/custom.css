@@ -1,0 +1,219 @@
+/* ==========================================================
+   Estilos propios del sitio "Funerales Eterna"
+   (se cargan después de style.css)
+   ========================================================== */
+
+.logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  letter-spacing: .5px;
+  line-height: 1;
+}
+.logo-text small {
+  display: block;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: .7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-top: 4px;
+}
+
+/* Banner de páginas internas */
+.page-banner {
+  position: relative;
+  min-height: 340px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 18, 13, .55);
+}
+.page-banner .container-lg { position: relative; z-index: 1; }
+.page-banner h1 { color: #fff; }
+.page-banner .breadcrumb a,
+.page-banner .breadcrumb-item,
+.page-banner .breadcrumb-item.active,
+.page-banner .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.85); }
+
+/* Accesos rápidos (estilo Velagio) */
+.quick-access { margin-top: -70px; position: relative; z-index: 5; }
+.quick-card {
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  padding: 28px 18px;
+  text-align: center;
+  height: 100%;
+  transition: transform .25s, box-shadow .25s;
+  display: block;
+  color: var(--black-color);
+}
+.quick-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,.12); color: var(--black-color); }
+.quick-card iconify-icon { font-size: 2.6rem; color: var(--secondary-color); }
+.quick-card h6 { margin: 12px 0 0; font-size: 1rem; }
+
+/* Tarjetas de características */
+.feature-box { border: 1px solid #e6e1dc; padding: 30px; height: 100%; background: #fff; }
+.feature-box iconify-icon { font-size: 2.4rem; color: var(--secondary-color); }
+
+/* Planes */
+.plan-card { border: 1px solid #e6e1dc; background: #fff; padding: 36px 28px; height: 100%; display: flex; flex-direction: column; }
+.plan-card.destacado { border: 2px solid var(--secondary-color); box-shadow: 0 14px 40px rgba(0,0,0,.08); }
+.plan-card .precio { font-family: "Playfair Display", serif; font-size: 2.4rem; color: var(--primary-color); }
+.plan-card ul { padding-left: 0; list-style: none; flex-grow: 1; }
+.plan-card ul li { padding: 8px 0; border-bottom: 1px dashed #e6e1dc; }
+.plan-card ul li iconify-icon { color: var(--secondary-color); margin-right: 6px; vertical-align: -2px; }
+
+/* Panel de formularios (contacto, atención inmediata) */
+.panel-form { position: sticky; top: 20px; background: #fff; border: 1px solid #e6e1dc; padding: 28px; }
+
+/* Galería */
+.gal-img { aspect-ratio: 1 / 1; object-fit: cover; }
+
+/* Florería */
+.flor-card img { aspect-ratio: 5/6; object-fit: cover; width: 100%; }
+.carrito { position: sticky; top: 20px; background: #fff; border: 1px solid #e6e1dc; padding: 24px; }
+.carrito-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed #e6e1dc; }
+
+/* Obituarios */
+.obit-card img { aspect-ratio: 1/1; object-fit: cover; width: 100%; }
+
+/* Salas */
+.sala-img { aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+
+/* Sucursales */
+.sucursal { border-left: 3px solid var(--secondary-color); padding: 14px 18px; background: #fff; margin-bottom: 14px; cursor: pointer; }
+.sucursal.activa { background: #f6f1ec; }
+.mapa-wrap iframe { width: 100%; height: 420px; border: 0; }
+
+/* Pasos (trámites / atención inmediata) */
+.paso { display: flex; gap: 18px; margin-bottom: 26px; }
+.paso .num {
+  flex: 0 0 48px; height: 48px; border-radius: 50%;
+  background: var(--secondary-color); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Playfair Display", serif; font-size: 1.3rem;
+}
+
+/* Franja 24 horas */
+.franja-24 { background: var(--primary-color); color: #fff; }
+.franja-24 h2, .franja-24 p { color: #fff; }
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 999;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #25D366; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  font-size: 2rem;
+}
+.whatsapp-float:hover { color: #fff; transform: scale(1.06); }
+
+.nav-link.active { color: var(--secondary-color) !important; }
+.btn-header { padding: 10px 22px !important; }
+
+.error-num { font-family: "Playfair Display", serif; font-size: 8rem; color: var(--secondary-color); line-height: 1; }
+
+/* Títulos en español: sin mayúscula en cada palabra */
+h1, h2, h3, h4, h5, h6, .banner-title, .quick-card h6 { text-transform: none !important; }
+#footer .info li { word-break: break-word; }
+/* Evita el scroll horizontal que provocan los gutters g-5 de Bootstrap */
+html, body { overflow-x: clip; }
+/* Tarjetas de servicios con la misma proporción */
+.svc-img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* ==========================================================
+   Barra superior + menú fijos al hacer scroll
+   ========================================================== */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: #fff;
+  transition: box-shadow .25s;
+}
+#header.scrolled { box-shadow: 0 6px 20px rgba(0, 0, 0, .10); }
+/* que los anclas (#planes, #condolencias...) no queden tapados por la barra */
+html { scroll-padding-top: 150px; }
+
+/* ==========================================================
+   Logo Velagio Memorial (texto + paloma)
+   ========================================================== */
+.logo-velagio {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  line-height: 1;
+  --oro: linear-gradient(180deg, #e2c584 0%, #c9a65f 45%, #a8803c 100%);
+}
+.logo-velagio .lv-dove { height: 54px; width: auto; margin-right: 6px; }
+.logo-velagio .lv-v,
+.logo-velagio .lv-top,
+.logo-velagio .lv-bot {
+  background: var(--oro);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.logo-velagio .lv-v { font-size: 68px; font-weight: 500; margin-right: -4px; }
+.logo-velagio .lv-words { display: flex; flex-direction: column; justify-content: center; }
+.logo-velagio .lv-top,
+.logo-velagio .lv-bot { font-size: 20px; letter-spacing: 1.8px; font-weight: 500; }
+.logo-velagio .lv-top { padding-left: 4px; position: relative; padding-bottom: 5px; margin-bottom: 4px; }
+/* la línea dorada con el punto al final */
+.logo-velagio .lv-top::after {
+  content: "";
+  position: absolute; left: -10px; right: -22px; bottom: 0;
+  height: 1.5px; background: #b8924a;
+}
+.logo-velagio .lv-top::before {
+  content: "";
+  position: absolute; right: -27px; bottom: -3px;
+  width: 7px; height: 7px; border-radius: 50%; background: #c9a65f;
+}
+@media (max-width: 575px) {
+  .logo-velagio .lv-dove { height: 36px; }
+  .logo-velagio .lv-v { font-size: 46px; }
+  .logo-velagio .lv-top, .logo-velagio .lv-bot { font-size: 14px; }
+}
+
+/* Al bajar sólo aparece la sombra; la barra NO cambia de tamaño
+   (cambiarlo provocaba que "vibrara" cerca del inicio de la página) */
+
+/* Redes sociales del pie de página */
+.red-social {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--accent-color); color: var(--accent-color);
+  transition: all .3s ease;
+}
+.red-social:hover { background: var(--accent-color); color: #fff; }
+.red-social svg { fill: currentColor; }
+.whatsapp-float svg { fill: currentColor; }
+
+/* Que el botón flotante de WhatsApp no tape "Llamar ahora" en la franja negra */
+@media (min-width: 992px) { .franja-24 .container-lg { padding-right: 90px; } }
+
+/* Etiqueta "Funeraria en Ixtapaluca" (SEO) */
+.eyebrow {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: .85rem; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase !important; color: var(--secondary-color);
+}
+.page-banner .eyebrow { color: #e2c584; }
+h1.eyebrow-hero { color: #e2c584; font-size: .95rem; line-height: 1.4; }
+#funeraria-ixtapaluca a { color: var(--primary-color); text-decoration: underline; text-decoration-color: var(--secondary-color); }
+
+/* Nuestro equipo (Nosotros) */
+.equipo-img { aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; }
+.equipo-grupo {
+  font-family: "Source Sans 3", sans-serif; font-size: .85rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase !important; color: var(--secondary-color);
+}
